@@ -28,12 +28,13 @@ namespace Task3._1._1
                 Console.Write("Введите {0} число: ", i + 1);
                 arr[i] = int.Parse(Console.ReadLine());
             }
+            
+
             Swap(ref arr);//передача параметра по ссылке
             Console.WriteLine("Элементы массива в обратном порядке: ");
-            for (int i = 0; i < arr.Length; i++)
-            {
-                Console.Write("{0} ", arr[i]);
-            }
+            foreach (int num in arr)
+                Console.Write($"{num} ");
+              
         }
     }
 }

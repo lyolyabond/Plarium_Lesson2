@@ -7,14 +7,13 @@ namespace Task3._1._2
         /*3.1.2 Найти количество элементов массива, встречающихся в нем один раз. */
         public static void OccurOnce(int[] arr, out int count_out)//пример передачи параметра с модификатором out
         {
-            int count = 0;
             int countOnce = 0;
             count_out = 0;
             for (int i = 0; i < arr.Length; i++)
             {
                 for (int j = 0; j < arr.Length; j++)
                 {
-                    if (i != j)
+                    if (i != j)//если это не тот же элемент
                     {
                         if (arr[i] == arr[j])//сравнивание одного элемента с каждым
                         {
@@ -25,7 +24,7 @@ namespace Task3._1._2
                 }
                 if (countOnce == arr.Length - 1)//если элемент встречается один раз, то значение countOnce должно быть равно длине массива-1
                 {
-                    count_out = ++count;//добавление количества элементов, которые встречаются один раз
+                    count_out++;//добавление количества элементов, которые встречаются один раз
                 }
                 countOnce = 0;
             }

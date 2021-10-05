@@ -38,10 +38,8 @@ namespace Task3._1._3
                 arr[i] = int.Parse(Console.ReadLine());
             }
             ArrayNM(ref arr);//передача параметра по ссылке
-            for (int i = 0; i < n + m; i++)
-            {
-                Console.Write("{0} ", arr[i]);
-            }
+            foreach (int num in arr)
+                Console.Write($"{num} ");
         }
     }
 }
